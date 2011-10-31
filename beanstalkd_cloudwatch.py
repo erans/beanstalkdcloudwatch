@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# Copyright 2009 Eran Sandler (eran@sandler.co.il)
+# Copyright 2011 Eran Sandler (eran@sandler.co.il)
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -98,7 +98,7 @@ class BeanstalkCloudWatch(object):
 		logging.info("Check Ended")
 
 def main():	
-	parser = OptionParser(description='AWS SQS queue status check command line tool')
+	parser = OptionParser(description='Publish Beanstalkd statistics into AWS CloudWatch as custom metrics')
 	parser.add_option('-k', '--aws_access_key_id', help='AWS Access Key ID')
 	parser.add_option('-s', '--aws_secret_access_key', help='AWS Secret Access Key')
 	parser.add_option("-H", "--queue_host", help="Beanstalk Host (default: 127.0.0.1)", default="127.0.0.1")
